@@ -8,11 +8,12 @@ import Carrossel from '@/components/Carrossel.vue'
         <div class="container-fluid bg-light">
             
             <div class='row introduction-bentricode text-dark align-items-center p-3'>
-                
+                <!--isso aqui era o gif azul-->
+                <span class="fw-bold text-center">Bentricode! Impulsionando seu negócio!</span>
             </div>
             <div class='row text-bg-light'>
-                <div class="col-4 mr-2 text-bg-dark rounded">
-                    <article class="col-12 mt-2 text-center">
+                <div class="col-4 ml-1 mr-2 text-bg-dark rounded">
+                    <article class="col-12 mt-2 text-center align-items-center">
                         <h1 class="col-12"> > Nossos Serviços</h1>
                         <div class="col m-2">
                             <div class="col-12 fs-4 fw-bold">web</div>
@@ -34,25 +35,25 @@ import Carrossel from '@/components/Carrossel.vue'
                             <div class="col-12"><i class="bi bi-window-fullscreen"></i></div>
                             <div class="col-12">Design de interfaces UI/UX para serviços</div>
                         </div>
-                        <button class="btn btn-success">Contate-nos</button>
+                        <button class="btn btn-success col m-2">Contate-nos</button>
                     </article>
                 </div>
-                <div class="col-8">
+                <div class="col-8 texto-apresentacao">
                     <h2 class="col-12 text-center">Bentricode: Inovação e Excelência em Soluções de Software</h2>
                     <p class="col-12">
 
-                    <p>Bem-vindo ao mundo da Bentricode, uma empresa de software
-                        líder em inovação e excelência na criação de soluções
+                    <p>Bem-vindo ao mundo da Bentricode, uma equipe de software
+                        em inovação e excelência na criação de soluções
                         tecnológicas sob medida. Fundada em 2019 por uma dupla de
                         visionários apaixonados por tecnologia, a Bentricode
-                        rapidamente se tornou uma referência no setor de desenvolvimento de software.</p>
+                        cresce no setor de desenvolvimento de software.</p>
                     <br>
-                    <p>Nossa equipe é composta por profissionais altamente qual
+                    <p>Nossa equipe é composta por profissionais qual
                         ificados e apaixonados por transformar ideias em realida
-                        de digital. Com décadas de experiência combinada, somos
-                        especializados em diversas áreas, incluindo desenvolvim
+                        de digital. Com nossa experiência combinada, somos
+                        capazes de projetos em diversas áreas, incluindo desenvolvim
                         ento de aplicativos móveis, softwares empresariais, sis
-                        temas de gestão, soluções de e-commerce, inteligência artificial
+                        temas de gestão, soluções de e-commerce, APIs
                         e muito mais.</p>
                     <br>
                     <p>Na Bentricode, a satisfação do cliente é nossa prioridade
@@ -219,6 +220,7 @@ import Carrossel from '@/components/Carrossel.vue'
 
 <style scoped>
 .introduction-bentricode{
+    /*
     background-image: url(/bentricode.gif);
     background-size: contain;
     background-position: center center;
@@ -226,5 +228,9 @@ import Carrossel from '@/components/Carrossel.vue'
     
     height: 300px;
     background-color: #fcfdfd;
+    */
+}
+.texto-apresentacao p{
+    font-size: 18px;
 }
 </style>

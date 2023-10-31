@@ -38,13 +38,16 @@ import { RouterLink, RouterView } from 'vue-router'
                         <RouterLink class="nav-link" to="about">Sobre Nozes</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projetos</a>
+                        <RouterLink class="nav-link" to="projects">O que Fazemos</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" to="partners">Parceiros</RouterLink>
                     </li>
                 </ul>
-                <form method="GET" action="#" class="d-flex form-pesquisar">
-                    <input name="squery" class="form-control me-2 input-pesquisa" type="search" placeholder="#" aria-label="Search">
-                    <button class="btn btn-primary btn-pesquisa" type="submit"><i class="bi bi-search"></i></button>
-                </form>
+                <div class="d-flex form-pesquisar form-contate p-1">
+                    Vamos Conversar
+                </div>
+                
             </div>
 
         </div>
@@ -53,25 +56,19 @@ import { RouterLink, RouterView } from 'vue-router'
                 <div class="dropdown">
                     <button class="btn text-light dropdown-toggle border-0 d-flex align-items-center " type="button"
                     id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="me-2">Visitante</span>
+                    <span class="me-2">Menu</span>
                     <i class="bi bi-person-circle fs-3"></i>
                     
 
                     </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                     <li class="d-flex justify-content-between mx-3">
-                        <a class="dropdown-item  p-0" href="#">Contrato</a>
+                        <a class="dropdown-item  p-0" href="#">Produtos</a>
                         <i class="bi bi-cart2"></i>
                     </li>
                     <li class="d-flex justify-content-between mx-3">
                         <a class="dropdown-item p-0" href="teste">Informações</a>
                         <i class="bi bi-info-circle"></i>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-item text-danger text-decoration-underline">Entre na sua Conta</a>
                     </li>
                 </ul>
                 </div>
@@ -86,3 +83,12 @@ import { RouterLink, RouterView } from 'vue-router'
 </header>
 <!-- Header final -->
 </template>
+
+<style scoped>
+.form-contate{
+    color: white;
+    border: 1px solid rgb(243, 209, 16);
+    background-color: rgb(16,16,16);
+    cursor: pointer;
+}
+</style>
