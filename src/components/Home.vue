@@ -1,5 +1,7 @@
 <script setup>
-import Carrossel from '@/components/Carrossel.vue'
+import Carrossel from '@/components/Carrossel.vue';
+
+
 </script>
 
 <template>
