@@ -1,12 +1,19 @@
 <script setup>
+import {ref} from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
-
+import Form from '../components/Form.vue'
 /**
  * A fazer:
  * - passar o form para v-model
  * - mais links
  * 
  */
+const exibirForm = ref(false);
+
+function abrirForm(){
+    exibirForm.value = true;
+}
+
 </script>
 
 
@@ -44,14 +51,14 @@ import { RouterLink, RouterView } from 'vue-router'
                         <RouterLink class="nav-link" to="partners">Parceiros</RouterLink>
                     </li>
                 </ul>
-                <div class="d-flex form-pesquisar form-contate p-1">
+                <div @click="abrirForm" class="d-flex form-pesquisar form-contate p-1">
                     Vamos Conversar
                 </div>
                 
             </div>
 
         </div>
-        <div class="col-2  order-2 order-lg-3 ">
+        <!--<div class="col-2  order-2 order-lg-3 ">
             <div class="d-flex justify-content-end">
                 <div class="dropdown">
                     <button class="btn text-light dropdown-toggle border-0 d-flex align-items-center " type="button"
@@ -73,7 +80,7 @@ import { RouterLink, RouterView } from 'vue-router'
                 </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
     </nav>
@@ -82,6 +89,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 </header>
 <!-- Header final -->
+<Form v-if="exibirForm"></Form>
 </template>
 
 <style scoped>

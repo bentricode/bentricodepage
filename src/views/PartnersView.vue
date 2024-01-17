@@ -5,7 +5,7 @@ import SectionHeader from "@/components/SectionHeader.vue";
 <template>
   <SectionHeader>
     <template v-slot:titulo-secao>
-      SAIBA MAIS SOBRE NÓS
+      NOSSOS PARCEIROS
     </template>
       A incrível história da BentriCode
   </SectionHeader>

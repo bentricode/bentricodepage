@@ -7,9 +7,6 @@ import './scss/styles.scss'
 import * as bootstrap from 'bootstrap'
 //--------
 
-// Depois colocar isso aqui no SCSS ??
-//import './assets/main.css'
-
 
 // Os imports do Vue e coisas dele (Pinia e Vue Router)
 
