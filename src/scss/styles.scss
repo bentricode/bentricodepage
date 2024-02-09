@@ -4,178 +4,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
 
-.visitante{
-    background-color: white;
-    
+/** TUDO  **/
 
-}
-footer {
-    color: aliceblue;
-    
-}
-
-.paragrafos {
-
-    text-indent: 2em;
-    
+*{
+    font-family: 'Poppins', sans-serif;
+    --cor-header: #0A0622;
+    --cor-primaria: #191439;
+    --cor-cinza: #8C8787;
+    --cor-blue: #00121E;
+    --cor-barra: #6D41B5;
+    --cor-laranja: #F0B35B;
+    --cor-laranja-escuro: #eba33e;
 }
 
-#logo {
+.orange{ color: var(--cor-laranja)};
+
+p{
+    font-size: 16px;
+}
+
+h5{
+    font-size: 18px;
+}
+
+h4{
+    font-size: 24px;
+}
+
+h3{
+    font-size: 28px;
+}
+
+h2{
+    font-size: 34px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.botao{
+    background-color: var(--cor-laranja);
+    border: none;
+    text-decoration: none;
+    padding: 10px 60px;
+}
+
+.botao:hover{
+    background-color: var(--cor-laranja-escuro);
+}
+
+  /** HEADER **/
+
+#logo-header{
     width: 100px;
 }
+  
+#nav-header{
+    background-color: var(--cor-header);
+    color: #FFFFFF;
+}
 
+#nav-header .botao{
+    border-radius: 6px;
+}
 
+#menu{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    
+}
 
-body {
-    /*
-    background-image: url(/back8.avif);
+#menu a{
+    text-decoration: none;
+}
+
+.link{
+    color: white;
+    font-size: 18px;
+    transition: all 300ms;
+}
+
+.link:hover{
+    font-size: 20px;
+    color: var(--cor-cinza);
+}
+
+/** BANNER **/
+#o-banner{
+    background-image: url('/banner.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    */
-    background-color: rgb(28,28,28);
-}
-.introduction-marlon{
-    background-color: #e6dfdf;
-    
-
-}
-
-main {
-    background-color: rgba(65, 64, 64, 0.877);
-}
-
-.navegacao {
-    margin-top: 20px;
-
-}
-
-main {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-}
-
-.navegacao nav a {
-    color: rgb(216, 39, 39);
-}
-
-.errors {
-    background-color: rgb(189, 117, 117);
-    font-family: Consolas;
-
-}
-
-.card-text {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    margin-bottom: 10px;
-    /* Adicione espaçamento no texto truncado */
-}
-
-.card img {
+    height: 100vh;
     width: 100%;
-    max-height: 190px;
-    background: white;
-    object-fit: contain;
 }
 
 
-
-.carousel-inner {
-    background-color: rgba(0, 0, 0, 0.808);
-
-}
-.carousel-item img{
-    width: 100%;
-    height: 100%;
-    
+/** SOBRE NOS **/
+#foto-sobre{
+    width: 50%;
 }
 
-/* SHOW.BLADE.PHP */
-.box-post {
-    background-color: rgb(22, 22, 22);
+#sobrenos{
+    background-color: var(--cor-primaria);
 }
 
-.post-thumb img {
-    display: block;
-    width: 180px;
-    /* temporario depois mudar isso está irresponsivo */
+#sobrenos h2{
+    color: var(--cor-laranja);
 }
 
-.titulos-posts {
-    text-align: left;
-    padding-left: 2px;
-    padding-top: 10px;
-    font-size: 12pt;
-    font-family: inherit;
-}
-.fundo-post{
-    background-color: white;
-}
+#sobrenos p{color: white;}
+#sobrenos .orange{color: var(--cor-laranja);}
 
-/* FIM DO SHOW.BLADE.PHP */
-.image-container {
-    max-width: 900px;
-    max-height: 400px;
-  }
 
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-/* PROJETOS */
-.conteudo-projetos{
-    background-color: white;
-    color: black;
-}
-/* FIM PROJETOS */
-
-/* FORMULARIOS */
-
-.form-wrapper{
-    background-color: whitesmoke;
-    color:rgb(22, 22, 22);
-    border-radius: 5px;
-    margin: 10px;
-    padding: 4px;
-}
-
-.form-error{
-    color: red; 
-    font-size: x-small;
-}
-
-/* PAGINADOR COISA */
-.texto-paginador{
-    color: white;
-}
-
-/* DASHBOARD */
-.container-grafico{
-    width: 100%;
-    max-width: 360px;
-}
-
-@media (max-width: 480px){
-    .container-grafico{
-        max-width: 200px;
+@media (max-width: 870px){
+    .deleteme{
+        display: none;
     }
-}
-
-.containerImagemBio{
-    width: 220px;
-    height: 220px;
-    
-}
-.containerImagemBio img{
-    border-radius: 100%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }

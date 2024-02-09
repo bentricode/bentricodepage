@@ -1,5 +1,16 @@
 /** POR ENQUANTO ISSO NAO ESTA SENDO USADO. OLHAR O ARQUIVO SCSS/STYLES.SCSS  **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  --cor-header: #0A0622;
+  --cor-primaria: #191439;
+  --cor-cinza: #8C8787;
+  --cor-blue: #00121E;
+  --cor-barra: #6D41B5;
+}
 
 #app {
   max-width: 1280px;
@@ -14,5 +25,16 @@ a,
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
+}
+
+/** HEADER **/
+
+#logo-header{
+  width: 180px;
+}
+
+#nav-header{
+  background-color: var(--cor-header);
+  color: #FFFFFF;
 }
 
