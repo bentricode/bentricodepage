@@ -15,9 +15,15 @@
     --cor-barra: #6D41B5;
     --cor-laranja: #F0B35B;
     --cor-laranja-escuro: #eba33e;
+    color: white;
+    margin: 0;
+    padding: 0;
+
 }
 
 .orange{ color: var(--cor-laranja)};
+.blue{ color: var(--cor-blue)};
+.black{color:#000000}
 
 p{
     margin: 0px;
@@ -43,6 +49,28 @@ h2{
 h1{
     font-size: 40px;
 }
+@media (max-width: 767px) {
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    h5{
+        font-size: 14px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+
+}
 
 .bold{
     font-weight: bold;
@@ -59,72 +87,9 @@ h1{
     background-color: var(--cor-laranja-escuro);
 }
 
-  /** HEADER **/
-
-#logo-header{
-    width: 100px;
-}
-  
-#nav-header{
-    background-color: var(--cor-header);
-    color: #FFFFFF;
-}
-
-#nav-header .botao{
-    border-radius: 6px;
-}
-
-#menu{
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    
-}
-
-#menu a{
-    text-decoration: none;
-}
-
-.link{
-    color: white;
-    font-size: 18px;
-    transition: all 300ms;
-}
-
-.link:hover{
-    font-size: 20px;
-    color: var(--cor-cinza);
-}
-
-/** BANNER **/
-#o-banner{
-    background-image: url('/banner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-}
+ 
 
 
-/** SOBRE NOS **/
-#foto-sobre{
-    width: 50%;
-}
-
-#sobrenos{
-    background-color: var(--cor-primaria);
-}
-
-#sobrenos h2{
-    color: var(--cor-laranja);
-}
-
-#sobrenos p{color: white;}
-#sobrenos .orange{color: var(--cor-laranja);}
 
 
-@media (max-width: 870px){
-    .deleteme{
-        display: none;
-    }
-}
+

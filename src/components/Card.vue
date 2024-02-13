@@ -5,7 +5,7 @@
     <div class="col-12 col-md-6 col-lg-4 cards ">
         <img class=" imagens-card" :src="imagem" alt="">
         <div class=" p-2  descricao-card d-flex justify-content-between align-items-center">
-            <p class=" m-0 p-0 bold">            
+            <p class=" m-0 p-0 bold texto-card fs-6">            
                 <slot></slot>
             </p>
             <button class="botao-card text-light">Saiba +</button>
@@ -25,6 +25,9 @@
     .descricao-card{
 
         background-color: #FAFAFA;
+        
+    }
+    .texto-card{
         color: var(--cor-primaria);
     }
     .imagens-card{

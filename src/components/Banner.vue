@@ -11,4 +11,37 @@ import Button from "@/components/Button.vue";
     </div>
 </template>
 <style scoped>
+    /** BANNER **/
+    #o-banner{
+        background-image: url('/banner.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        padding: 20px;
+    }
+    @media (max-width: 576px) {
+    /* Estilos para telas pequenas (exemplo: smartphones) */
+        #o-banner {
+            background-image: url('/bannermob.png');
+            background-position: 400px left; /* Mantém a imagem à esquerda com 20px de padding à direita */
+            
+
+        }
+    }
+
+    @media (max-width: 800px) {
+        /* Estilos para telas médias (exemplo: tablets) */
+        #o-banner {
+            background-image: url('/bannertab.png');
+            background-position: left; /* Mantém a imagem à esquerda */
+           
+        }
+    }
+    @media (min-width: 900px) {
+        /* Estilos para telas médias (exemplo: tablets) */
+        p{
+            font-size: 30px;
+        }
+    }
 </style>
