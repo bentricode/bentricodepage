@@ -4,16 +4,21 @@ import CardEquipe from '@/components/CardEquipe.vue';
 import Sobre from '@/components/Sobre.vue';
 import Servico from '@/components/Servico.vue';
 
+
+
+
 </script>
 
 <template>
+   
     <Banner />
 
-    <Sobre />
+    <Sobre /> 
 
     <Servico />
 
     <CardEquipe></CardEquipe>
+   
 
 
     <!--EQUIPE-->
@@ -21,6 +26,7 @@ import Servico from '@/components/Servico.vue';
     <!--PROJETOS-->
 
     <!--FOOTER-->
+    
 </template>
 
 <style scoped></style>

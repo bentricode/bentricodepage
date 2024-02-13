@@ -21,6 +21,7 @@
         box-shadow: 9px 11px 20px -12px rgba(0,0,0,0.75);
         border-radius: 0px 0px 12px 12px;
         overflow: hidden;
+        max-width: 80%;
     }
     .descricao-card{
 

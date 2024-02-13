@@ -87,9 +87,28 @@ h1{
     background-color: var(--cor-laranja-escuro);
 }
 
+header{
+    background-color: none;
+}
+.header-event {
+    backdrop-filter: none;
+    background-color:var(--cor-header); 
+}
  
+/* Animações*/
 
 
+@keyframes subir-baixo-cima {
+    from {
+        opacity: 0;
+        translate: 0 100vw;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
 
 
 

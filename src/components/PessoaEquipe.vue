@@ -207,10 +207,7 @@ p {
         width: 150px;
     }
 
-    .card-equipe {
 
-        border-radius: 20px;
-    }
 }
 
 
@@ -225,6 +222,9 @@ p {
     .icons-equipe {
         justify-content: center;
         font-size: 40px;
+    }
+    .card-equipe{
+        border-radius:20px ;
     }
 
 

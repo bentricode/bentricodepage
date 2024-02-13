@@ -24,10 +24,6 @@
         p{
             margin: 0;
         }
-        .card-equipe ul{
-            margin: 0;
-            padding: 0 10px;
-        }
         .equipe{
             background-color: var(--cor-blue);
             padding: 60px 20px;
@@ -43,81 +39,8 @@
             
 
         }
-        .container-img{
-            width: 205px;
-            max-height: 250px;
-            display: flex;
-            overflow: hidden;
-            align-items: center;
-            position: relative;
-
-        }
-        .container-img img{
-            width: 100%;
-        }
-        .container-img h3{
-            position: absolute;
-            bottom: 0;
-            margin: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.37);
-            
-            
-            text-align: center;
-        }
-        .card-equipe{
-            display: flex;
-            gap: 7px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-            background: #6d41b51f;
-            border-radius: 0 20px 20px 0;   
-            padding: 0;
-            
-            
-        }
-        .card-equipe li{
-            margin: 0 30px;
-            
-
-        }
-        .lista{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            margin: 5px 0;
-            
-        }
-        .box{
-            width: 200px;
-            height: 20px;
-            border-radius: 15px;
-            background-color: var(--cor-cinza);
-            overflow: hidden;
-            
-        }
-        .icons-equipe{
-            justify-content: start;
-            font-size: 28px;
-        }
-        .basico{
-            height: 100%;
-            background-color: var(--cor-barra);
-            animation: nivel-cresce-basico 1.5s forwards;
-        }
-        .intermediario{
-            height: 100%;
-            background-color: var(--cor-barra);
-            animation: nivel-cresce-intermediario 1.5s forwards;
-        }
-        .avancado{
-            height: 100%;
-            background-color: var(--cor-barra);
-            animation: nivel-cresce-avancado 1.5s forwards;
-        }
+        
+   
         @media (max-width: 576px){
             .box{
                 width: 150px;
