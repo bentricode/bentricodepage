@@ -7,8 +7,8 @@
         <div class="equipe-edit">
             <img class="d-none d-md-block img-fluid" src="/nossaequipe.png" alt="">
             <div>    
-                <PessoaEquipe habilidade1="HTML/CSS/JS" nivelhab1 ="avancado" habilidade2="PHP" nivelhab2="intermediario" habilidade3="React.js/Vue.js" nivelhab3="intermediario" habilidade4="Laravel" nivelhab4="basico" habilidade5="SQL" nivelhab5="intermediario" imagem="/ga2.jpg">Gabriel</PessoaEquipe>
-                <PessoaEquipe habilidade1="HTML/CSS/JS" nivelhab1 ="avancado" habilidade2="Java" nivelhab2="intermediario" habilidade3="React.js/Vue.js" nivelhab3="basico" habilidade4="Figma" nivelhab4="intermediario" habilidade5="Spring Boot" nivelhab5="basico" imagem="/marlon.jpg">Márlon</PessoaEquipe>             
+                <PessoaEquipe habilidade1="HTML/CSS/JS" nivelhab1 ="avancado" habilidade2="PHP" nivelhab2="intermediario" habilidade3="React.js/Vue.js" nivelhab3="intermediario" habilidade4="Laravel" nivelhab4="basico" habilidade5="SQL" nivelhab5="intermediario" imagem="/ga2.jpg" linkgit="https://github.com/GabrielHenB" linklinkedin="https://www.linkedin.com/in/gabriel-braz-4a6b06224/">Gabriel</PessoaEquipe>
+                <PessoaEquipe habilidade1="HTML/CSS/JS" nivelhab1 ="avancado" habilidade2="Java" nivelhab2="intermediario" habilidade3="React.js/Vue.js" nivelhab3="basico" habilidade4="Figma" nivelhab4="intermediario" habilidade5="Spring Boot" nivelhab5="basico" imagem="/marlon.jpg" linkgit="https://github.com/marlon-bento" linklinkedin="https://www.linkedin.com/in/marlon-bento-461ba755/">Márlon</PessoaEquipe>             
             </div>
         </div>
     </section>

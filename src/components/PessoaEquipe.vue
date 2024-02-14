@@ -11,7 +11,9 @@ export default {
         habilidade4: String,
         nivelhab4: String,
         habilidade5: String,
-        nivelhab5: String
+        nivelhab5: String,
+        linkgit: String,
+        linklinkedin: String
     },
     mounted() {
         const boxes = document.querySelectorAll(".nivel");
@@ -95,9 +97,9 @@ export default {
                 </li>
 
                 <div class="icons-equipe row gap-1">
-                    <a class="col-1 " href="https://www.linkedin.com/in/marlon-bento-461ba755/"><i
+                    <a class="col-1 " :href="linklinkedin"><i
                             class="bi bi-linkedin"></i></a>
-                    <a class="col-1 mx-3 mx-md-0" href="https://github.com/marlon-bento"><i class="bi bi-github"></i></a>
+                    <a class="col-1 mx-3 mx-md-0" :href="linkgit"><i class="bi bi-github"></i></a>
                 </div>
             </ul>
 
