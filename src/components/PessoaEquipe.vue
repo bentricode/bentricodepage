@@ -97,9 +97,9 @@ export default {
                 </li>
 
                 <div class="icons-equipe row gap-1">
-                    <a class="col-1 " :href="linklinkedin"><i
+                    <a class="col-1 " target="_blank" :href="linklinkedin"><i
                             class="bi bi-linkedin"></i></a>
-                    <a class="col-1 mx-3 mx-md-0" :href="linkgit"><i class="bi bi-github"></i></a>
+                    <a class="col-1 mx-3 mx-md-0" target="_blank" :href="linkgit"><i class="bi bi-github"></i></a>
                 </div>
             </ul>
 
