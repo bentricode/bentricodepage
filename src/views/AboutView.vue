@@ -1,8 +1,9 @@
 <script setup>
 import SectionHeader from "@/components/SectionHeader.vue";
-
+import Header from '../components/Header.vue'
 </script>
 <template>
+  <Header></Header>
   <SectionHeader>
     <template v-slot:titulo-secao>
       SAIBA MAIS SOBRE NÓS

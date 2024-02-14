@@ -1,19 +1,106 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
-import Form from '../components/Form.vue'
+import { ref, onMounted } from 'vue'
+import { RouterLink, useRouter, useRoute, onBeforeRouteUpdate } from 'vue-router'
+import { useCounterStore } from '@/stores/counter.js';
 import Button from '@/components/Button.vue'
+import Faleconosco from '@/components/Faleconosco.vue'
 /**
  * A fazer:
  * - passar o form para v-model
  * - mais links
  * 
  */
-const exibirForm = ref(false);
+const mostrarFaleconosco = ref(false);
+const router = useRouter();
+const route = useRoute();
 
-function abrirForm() {
-  exibirForm.value = true;
+const counterStore = useCounterStore();
+
+    const isSobre = counterStore.isSobre;
+    const isChangingSobre = ref(false);
+    const isChangingProj = ref(false);
+    const isChangingServ = ref(false);
+
+    const setSobre = () => {
+      counterStore.setIsSobre(true);
+    };
+    const setServicos = () => {
+      counterStore.setIsServicos(true);
+    };
+    const setProjetos = () => {
+      counterStore.setIsProjetos(true);
+    };
+
+
+function fecharFaleconosco(){
+    mostrarFaleconosco.value = !mostrarFaleconosco.value;
 }
+
+function scrollSobre(){
+    const sobre = document.querySelector('#sobrenos');
+    if(sobre){
+      sobre.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }else{
+      setSobre();
+      isChangingSobre.value = true;
+      router.push({
+        name: 'home'
+      });
+    }
+}
+
+function scrollProj(){
+    const projeto = document.querySelector('#projetos');
+    if(projeto){
+      projeto.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }else{
+      setProjetos();
+      isChangingProj.value = true;
+      router.push({
+        name: 'home'
+      });
+    }
+}
+
+function scrollServ(){
+    const servico = document.querySelector('#servicos');
+    if(servico){
+      servico.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }else{
+      setServicos();
+      isChangingServ.value = true;
+      router.push({
+        name: 'home'
+      });
+    }
+}
+
+onMounted(() => {
+  if(counterStore.isSobre){
+    document.querySelector('#sobrenos').scrollIntoView();
+  }
+  if(counterStore.isServico){
+    document.querySelector('#servicos').scrollIntoView();
+  }
+  if(counterStore.isProjeto){
+    document.querySelector('#projetos').scrollIntoView();
+  }
+})
+
+onBeforeRouteUpdate(() => {
+  if(!isChangingSobre.value)
+    counterStore.setIsSobre(false);
+  if(!isChangingServ.value)
+    counterStore.setIsServicos(false);
+    if(!isChangingProj.value)
+    counterStore.setIsProjetos(false);
+})
 
 </script>
 
@@ -35,19 +122,25 @@ function abrirForm() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="link" aria-current="page" href="#">Home</a>
+              <RouterLink to="/" class="link" aria-current="page" >Home</RouterLink>
+              <!--<a class="link" aria-current="page" href="#">Home</a>-->
             </li>
             <li class="nav-item">
-              <a class="link" href="#">Sobre</a>
+              <!--<RouterLink :to="{name: 'about'}" class="link">Sobre</RouterLink>-->
+              <a class="link" id="vaiprosobre" @click="scrollSobre" href="#">Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="link" href="#">Equipe</a>
+              <!--<RouterLink :to="{name: 'services'}" class="link">Serviços</RouterLink>-->
+              <a class="link" @click="scrollServ" href="#">Serviços</a>
             </li>
             <li class="nav-item">
-              <a class="link" href="#">Projetos</a>
+              <!--<RouterLink :to="{name: 'projects'}" class="link">Projetos</RouterLink>-->
+              <a class="link" @click="scrollProj" href="#">Projetos</a>
             </li>
           </ul>
-          <Button @click="toggleFaleconosco">Fale Conosco</Button>
+          <Button id="seilacara" :metodo="fecharFaleconosco" texto="Fale Conosco"> 
+            <Faleconosco v-if="mostrarFaleconosco" @fechar="fecharFaleconosco"></Faleconosco>
+          </Button>
           <!--<form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -59,7 +152,6 @@ function abrirForm() {
 
   </header>
   <!-- Header final -->
-  <Form v-if="exibirForm"></Form>
 </template>
     
 <style scoped>
@@ -95,6 +187,14 @@ function abrirForm() {
 .link:hover {
   font-size: 20px;
   color: var(--cor-cinza);
+}
+
+.header-event .link{
+    color: var(--cor-laranja); 
+}
+
+.header-event .link:hover{
+    color: var(--cor-laranja-claro); 
 }
 
 .form-contate {

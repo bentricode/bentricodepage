@@ -3,7 +3,7 @@ import Banner from '@/components/Banner.vue';
 import CardEquipe from '@/components/CardEquipe.vue';
 import Sobre from '@/components/Sobre.vue';
 import Servico from '@/components/Servico.vue';
-
+import ProjetosSecao from '@/components/ProjetosSecao.vue';
 
 
 
@@ -12,14 +12,14 @@ import Servico from '@/components/Servico.vue';
 <template>
    
     <Banner />
-
-    <Sobre /> 
+    
+    <Sobre/> 
 
     <Servico />
 
     <CardEquipe></CardEquipe>
    
-
+    <ProjetosSecao />
 
     <!--EQUIPE-->
 
