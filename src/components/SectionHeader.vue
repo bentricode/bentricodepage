@@ -1,9 +1,37 @@
 <script setup>
-//const props = defineProps(['attributeBag'])
+import {onMounted} from 'vue';
+const props = defineProps(['imgsrc'])
+onMounted(() => {
+    
+    // Obtenha o elemento small-banner
+    let smallBanner = document.querySelectorAll('.o-banner')[0];
+
+    // Adicione um ouvinte de rolagem (scroll)
+    window.addEventListener("scroll", function () {
+        // Obtenha a posição do small-banner em relação ao topo da página
+        const smallBannerPosition = smallBanner.offsetTop;
+
+        // Obtenha a altura do small-banner
+        const smallBannerHeight = smallBanner.offsetHeight;
+
+        // Obtenha a posição de rolagem
+        const scrollPosition = window.scrollY || window.pageYOffset;
+
+        // Verifique se o header está completamente fora do small-banner
+        if (scrollPosition > smallBannerPosition + smallBannerHeight) {
+            // Se sim, adicione a classe header-event
+            document.querySelector('header').classList.add('header-event');
+        } else {
+            // Se não, remova a classe header-event
+            document.querySelector('header').classList.remove('header-event');
+        }
+    });
+
+})
 </script>
 
 <template>
-    <header class="headersecao text-center text-white">
+    <header class="o-banner headersecao text-center text-white" :style="{ backgroundImage: `url('${imgsrc}')` }">
         <h1 class="titulosecao">
             > <slot name="titulo-secao"></slot>
         </h1>

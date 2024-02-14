@@ -1,29 +1,29 @@
-
-<script>
+<script setup>
+import {ref, onMounted} from 'vue';
 import Button from "@/components/Button.vue";
+import Faleconosco from '@/components/Faleconosco.vue';
 
-export default {
-    components: {
-        Button
-    },
-    props: {
-        // props ...
-    },
-    mounted() {
-        document.addEventListener("DOMContentLoaded", function () {
+const mostrarFaleconosco = ref(false);
+
+function fecharFaleconosco(){
+    mostrarFaleconosco.value = !mostrarFaleconosco.value;
+}
+
+onMounted(() => {
+    
             // Obtenha o elemento small-banner
-            var smallBanner = document.querySelector('#o-banner');
+            let smallBanner = document.querySelectorAll('.o-banner')[0];
 
             // Adicione um ouvinte de rolagem (scroll)
             window.addEventListener("scroll", function () {
                 // Obtenha a posição do small-banner em relação ao topo da página
-                var smallBannerPosition = smallBanner.offsetTop;
+                const smallBannerPosition = smallBanner.offsetTop;
 
                 // Obtenha a altura do small-banner
-                var smallBannerHeight = smallBanner.offsetHeight;
+                const smallBannerHeight = smallBanner.offsetHeight;
 
                 // Obtenha a posição de rolagem
-                var scrollPosition = window.scrollY || window.pageYOffset;
+                const scrollPosition = window.scrollY || window.pageYOffset;
 
                 // Verifique se o header está completamente fora do small-banner
                 if (scrollPosition > smallBannerPosition + smallBannerHeight) {
@@ -34,17 +34,20 @@ export default {
                     document.querySelector('header').classList.remove('header-event');
                 }
             });
-        });
-    }
-}
+        
+})
+
 </script>
+
 <template>
-    <div id="o-banner" class="d-flex flex-column align-items-center justify-content-center text-white">
+    <div id="o-banner" class="o-banner d-flex flex-column align-items-center justify-content-center text-white">
         <h1 id="titulo-banner" class="text-center"> TRANSFORMANDO IDEIAS EM SOFTWARE <br> <span class="bold">COM
                 ESTILO!</span></h1>
         <p class="text-center">Vamos criar juntos? <br>
             Entre em contato e vamos transformar suas ideias em realidade digital com a BentriCode!</p>
-        <Button id="botao-contato">Fale Conosco</Button>
+        <Button :metodo="fecharFaleconosco" texto="Fale Conosco" id="botao-contato">
+            <Faleconosco v-if="mostrarFaleconosco" @fechar="fecharFaleconosco"></Faleconosco>
+        </Button>
     </div>
 </template>
 <style scoped>

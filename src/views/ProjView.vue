@@ -1,9 +1,10 @@
 <script setup>
 import SectionHeader from "@/components/SectionHeader.vue";
-
+import Header from '../components/Header.vue'
 </script>
 <template>
-  <SectionHeader>
+  <Header></Header>
+  <SectionHeader imgsrc="/banner.png">
     <template v-slot:titulo-secao>
       NOSSOS PROJETOS
     </template>
@@ -72,6 +73,7 @@ import SectionHeader from "@/components/SectionHeader.vue";
         </article>
       </div>
     </div>
+    <div class="p-5"></div>
   </main>
 </template>
 

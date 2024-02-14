@@ -1,10 +1,18 @@
 <script setup>
+defineProps(['id','metodo','texto'])
+/*
+const mostrarFaleconosco = ref(false);
 
+function fecharFaleconosco(){
+    mostrarFaleconosco.value = !mostrarFaleconosco.value;
+}*/
 </script>
 <template>
-    <button @click="toggleFaleconosco" class="botao bold"><slot></slot></button>
+    <!--<button @click="mostrarFaleconosco = !mostrarFaleconosco" class="botao bold"><slot></slot></button>-->
 
-    <faleconosco :mostrarComponente="mostrarFaleconosco" @fechar="fecharFaleconosco" />
+    <button :id="id" @click="metodo" class="botao bold">{{ texto }}</button>
+    <slot></slot>
+    <!--<Faleconosco v-if="mostrarFaleconosco" @fechar="fecharFaleconosco" />-->
 </template>
 <style scoped>
     .botao{
@@ -12,25 +20,3 @@
     }
 </style>
 
-<script>
-    import Faleconosco from './Faleconosco.vue';
-
-    export default {
-    components: {
-        Faleconosco,
-    },
-    data() {
-        return {
-        mostrarFaleconosco: false,
-        };
-    },
-    methods: {
-        toggleFaleconosco() {
-        this.mostrarFaleconosco = !this.mostrarFaleconosco;
-        },
-        fecharFaleconosco() {
-        this.mostrarFaleconosco = false;
-        },
-    },
-    };
-</script>
