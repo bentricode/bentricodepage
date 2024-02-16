@@ -1,5 +1,12 @@
 <script setup>
+    import { useRouter, useRoute } from 'vue-router'
     defineProps(['imagem']);
+    const router = useRouter();
+    function mudarRota(){
+        router.push({
+            name: 'services'
+        });
+    }
 </script>
 <template>
     <div class="col-12 col-md-6 col-lg-4 cards ">
@@ -8,7 +15,7 @@
             <p class=" m-0 p-0 bold texto-card fs-6">            
                 <slot></slot>
             </p>
-            <button class="botao-card text-light">Saiba +</button>
+            <button @click="mudarRota" class="botao-card text-light">Saiba +</button>
 
         </div>
     </div>

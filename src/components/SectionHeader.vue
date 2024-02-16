@@ -32,12 +32,12 @@ onMounted(() => {
 
 <template>
     <header class="o-banner headersecao text-center text-white" :style="{ backgroundImage: `url('${imgsrc}')` }">
-        <h1 class="titulosecao">
-            > <slot name="titulo-secao"></slot>
+        <h1 class="titulosecao m-0 p-0">
+             <slot name="titulo-secao"></slot>
         </h1>
-        <span class="descricaosecao">
+        <p class="descricaosecao">
             <slot></slot>
-        </span>
+        </p>
     </header>
 </template>
 
@@ -47,12 +47,15 @@ onMounted(() => {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    
-    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:65vh;
     background-color: #101010;
 }
 .titulosecao, .descricaosecao{
-    padding-top: 50px;
+    
 }
 .titulosecao{
     font-size: 26pt;

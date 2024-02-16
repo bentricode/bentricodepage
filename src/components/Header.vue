@@ -122,20 +122,20 @@ onBeforeRouteUpdate(() => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <RouterLink to="/" class="link" aria-current="page" >Home</RouterLink>
+              <RouterLink to="/" class="link" aria-current="page"  >Home</RouterLink>
               <!--<a class="link" aria-current="page" href="#">Home</a>-->
             </li>
             <li class="nav-item">
               <!--<RouterLink :to="{name: 'about'}" class="link">Sobre</RouterLink>-->
-              <a class="link" id="vaiprosobre" @click="scrollSobre" href="#">Sobre</a>
+              <a class="link" id="vaiprosobre"  href="#sobrenos">Sobre</a>
             </li>
             <li class="nav-item">
               <!--<RouterLink :to="{name: 'services'}" class="link">Serviços</RouterLink>-->
-              <a class="link" @click="scrollServ" href="#">Serviços</a>
+              <a class="link"  href="#servicos">Serviços</a>
             </li>
             <li class="nav-item">
               <!--<RouterLink :to="{name: 'projects'}" class="link">Projetos</RouterLink>-->
-              <a class="link" @click="scrollProj" href="#">Projetos</a>
+              <a class="link"  href="#projetos">Projetos</a>
             </li>
           </ul>
           <Button id="seilacara" :metodo="fecharFaleconosco" texto="Fale Conosco"> 
