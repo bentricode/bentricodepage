@@ -13,7 +13,7 @@ import Dao from '@/components/Dao.vue';
           <br/> Confira alguns de nossos serviços abaixo.</p>
         <article class="row justify-content-center mb-5 ">
             <Card imagem="/card1.png">Desenvolvimento Web</Card>
-            <Card imagem="/card2.png">Tecnologias Modernas</Card>
+            <Card imagem="/card2.png">API e Serviços</Card>
             <Card imagem="/card3.png">Design UI/UX</Card>
         </article>
         <Dao></Dao>

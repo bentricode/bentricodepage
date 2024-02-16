@@ -3,7 +3,7 @@
         <div class="componente" @click.stop>
 
             <h2 class="text-center text-light px-4">Contate-nos</h2>
-            <form class="o-form row g-3">
+            <form @submit.prevent="formSubmit" class="o-form row g-3">
                 <div class="col-md-6">
                     <label for="inputEmail" class="form-label">Email</label>
                     <input type="email" class="form-control" id="inputEmail">
@@ -28,15 +28,15 @@
                     <label for="inputReason" class="form-label">Motivo do Contato</label>
                     <select id="inputReason" class="form-select">
                         <option selected>Selecione</option>
-                        <option>Conhecer os serviços da Bentricode</option>
-                        <option value="">Contratar seviços da Bentricode</option>
-                        <option value="">Requisitar informações da Bentricode</option>
-                        <option value="">Conhecer vagas e oportunidades na Bentricode</option>
-                        <option value="">Outros</option>
+                        <option value="0">Conhecer os serviços da Bentricode</option>
+                        <option value="1">Contratar seviços da Bentricode</option>
+                        <option value="2">Requisitar informações da Bentricode</option>
+                        <option value="3">Conhecer vagas e oportunidades na Bentricode</option>
+                        <option value="4">Outros</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Zip</label>
+                    <label for="inputZip" class="form-label">Cod. Postal</label>
                     <input type="text" class="form-control" id="inputZip">
                 </div>
                 <div class="col-12">
@@ -60,11 +60,14 @@ export default {
         fecharComponente() {
             this.$emit('fechar');
         },
+        formSubmit(){
+            window.alert("Erro: Nao aceitamos essa operacao no momento!");
+        },
     },
 };
 </script>
   
-<style>
+<style scoped>
 label {
     color: var(--cor-cinza);
 }
@@ -91,5 +94,8 @@ label {
     width: 50%;
     padding: 20px;
     border-radius: 5px;
+}
+option{
+    color: black;
 }
 </style>

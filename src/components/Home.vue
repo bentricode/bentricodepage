@@ -20,12 +20,6 @@ import ProjetosSecao from '@/components/ProjetosSecao.vue';
     <CardEquipe></CardEquipe>
    
     <ProjetosSecao />
-
-    <!--EQUIPE-->
-
-    <!--PROJETOS-->
-
-    <!--FOOTER-->
     
 </template>
 

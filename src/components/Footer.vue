@@ -31,6 +31,7 @@
                 <p id="flairtext">A BentriCode é uma equipe de desenvolvedores apaixonados por criar experiências excepcionais na web. 
                     Com uma mistura de habilidades front-end e back-end, estamos prontos para enfrentar desafios e entregar
                      soluções de alta qualidade.</p>
+                <p><a href="/terms">Termos de Serviço</a></p>
             </div>
         </div>
     </footer>

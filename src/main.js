@@ -22,3 +22,9 @@ app.use(createPinia())
 app.use(router) //Do arquivo index.js em router
 
 app.mount('#app') //Inicia Componente Raiz do Vue Aqui
+
+//Manipule a animacao de load
+const loadingOverlay = document.querySelector('#mainLoading');
+if (loadingOverlay) {
+  loadingOverlay.style.display = 'none';
+}

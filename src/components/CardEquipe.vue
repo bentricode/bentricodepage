@@ -2,7 +2,7 @@
     import PessoaEquipe from '@/components/PessoaEquipe.vue';
 </script>
 <template>
-    <section class="equipe">
+    <section id="equipe" class="equipe">
         <h1 id="titulo-equipe" class="d-block d-md-none text-light text-center">NOSSA EQUIPE</h1>
         <div class="equipe-edit">
             <img class="d-none d-md-block img-fluid" src="/nossaequipe.png" alt="">

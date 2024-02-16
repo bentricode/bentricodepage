@@ -7,15 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BentriCode</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      /** Loading **/
+      .loading-thing {
+            width: 100px;
+            height: 100px;
+
+            animation: giragira 3s infinite linear;
+        }
+        .loading-overlay {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          background-color: #00121E;
+          color: white;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: large;
+        }
+        .loading-bold {
+          font-weight: bold;
+          color: rgb(102, 33, 33);
+        }
+        @keyframes giragira {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
   </head>
   <body>
+
     <noscript>
       <div style="display: absolute; top: 40%; left: 40%;">
         <h1 style="text-align: center;"><strong>Atenção!</strong></h1>
         <p style="text-align: center;">Esta aplicação necessita do <strong>Javascript ativado</strong> para funcionar</p>
       </div>
     </noscript>
+
+    <div id="mainLoading" class="loading-overlay">
+      <img src="/Udao.png" class="loading-thing"></img>
+      <h2 class="loading-bold">Carregando...</h2>
+      <p id="textLoading">"Existem milhares de daos e todos levam ao topo"</p>
+    </div>
+
     <div id="app"></div>
+
     <script type="module" src="/src/main.js"></script>
+
   </body>
 </html>

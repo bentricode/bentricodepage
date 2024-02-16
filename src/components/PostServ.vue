@@ -11,6 +11,11 @@
                 <slot>
                     
                 </slot>
+                <div class="d-flex gap-1 my-2">
+                    <slot name="conteudo">
+
+                    </slot>
+                </div>
             </p>
 
         </div> 

@@ -81,6 +81,14 @@ function scrollServ(){
     }
 }
 
+function scrollEquipe(){
+  //Se a rota nao for home mude para home
+  if(route.name !== 'home')
+    router.push({name: 'home'});
+  else
+    document.querySelector('#equipe').scrollIntoView({behavior: 'smooth'});
+}
+
 onMounted(() => {
   if(counterStore.isSobre){
     document.querySelector('#sobrenos').scrollIntoView();
@@ -123,28 +131,29 @@ onBeforeRouteUpdate(() => {
           <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <RouterLink to="/" class="link" aria-current="page"  >Home</RouterLink>
-              <!--<a class="link" aria-current="page" href="#">Home</a>-->
+              <!--Link de roteamento para o home-->
             </li>
             <li class="nav-item">
-              <!--<RouterLink :to="{name: 'about'}" class="link">Sobre</RouterLink>-->
-              <a class="link" id="vaiprosobre"  href="#sobrenos">Sobre</a>
+              <!--manter o href e o evento-->
+              <a class="link" id="vaiprosobre" @click="scrollSobre"  href="#sobrenos">Sobre</a>
             </li>
             <li class="nav-item">
-              <!--<RouterLink :to="{name: 'services'}" class="link">Serviços</RouterLink>-->
-              <a class="link"  href="#servicos">Serviços</a>
+              <!--manter o href-->
+              <a class="link" @click="scrollEquipe" href="#equipe">Equipe</a>
             </li>
             <li class="nav-item">
-              <!--<RouterLink :to="{name: 'projects'}" class="link">Projetos</RouterLink>-->
-              <a class="link"  href="#projetos">Projetos</a>
+              <!--manter o href e o evento-->
+              <a class="link" @click="scrollServ"  href="#servicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <!--manter o href e o evento-->
+              <a class="link" @click="scrollProj" href="#projetos">Projetos</a>
             </li>
           </ul>
           <Button id="seilacara" :metodo="fecharFaleconosco" texto="Fale Conosco"> 
             <Faleconosco v-if="mostrarFaleconosco" @fechar="fecharFaleconosco"></Faleconosco>
           </Button>
-          <!--<form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>-->
+          
         </div>
 
       </div>
