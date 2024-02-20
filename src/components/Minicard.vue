@@ -2,7 +2,7 @@
 defineProps(['icone','titulo']);
 </script>
 <template>
-    <div class="minicard">
+    <div class="col-6 minicard  text-center ">
         <img class="minicard-icon" :src="icone" alt="i" />
         <h5>{{ titulo }}</h5>
         <slot> </slot>
@@ -12,9 +12,8 @@ defineProps(['icone','titulo']);
 .minicard{
     margin-bottom: 30px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.233);
-    border: rgb(78, 76, 76) solid 2px;
-    max-width: 180px;
+    
+   
     overflow: hidden; /* Ocultar conteúdo que ultrapassa as bordas */
 }
 .minicard-icon{

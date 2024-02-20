@@ -11,7 +11,7 @@
                 <slot>
                     
                 </slot>
-                <div class="d-flex flex-wrap gap-1 my-2">
+                <div class="row ">
                     <slot name="conteudo">
 
                     </slot>
