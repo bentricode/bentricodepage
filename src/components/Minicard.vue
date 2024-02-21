@@ -3,7 +3,7 @@ defineProps(['icone','titulo']);
 </script>
 <template>
     <div class="col-6 minicard  text-center ">
-        <img class="minicard-icon" :src="icone" alt="i" />
+        <img class="minicard-icon mb-1" :src="icone" alt="i" />
         <h5>{{ titulo }}</h5>
         <slot> </slot>
     </div>
@@ -17,7 +17,7 @@ defineProps(['icone','titulo']);
     overflow: hidden; /* Ocultar conteúdo que ultrapassa as bordas */
 }
 .minicard-icon{
-    width: 50px;
+    width: 90px;
 }
 h5{
     flex: 0; /* Dá ao h5 um espaço flexível para não ultrapassar os limites do contêiner */

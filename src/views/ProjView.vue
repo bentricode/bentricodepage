@@ -12,15 +12,18 @@ import PostProj from '@/components/PostProj.vue'
     A incível História
   </SectionHeader>
   <main id="conteudo-proj" >
-    <div class="container">
-        <PostProj titulo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ab." imagem="https://picsum.photos/200/300" url="#">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem molestiae qui assumenda maiores error repellat ipsam, nulla ea expedita repellendus accusantium cum voluptatem, laboriosam dolor. Voluptas incidunt ipsa illo facilis?
+    <div class="container-fluid">
+        <PostProj titulo="BentriCode Blog" imagem="/proj1.jpeg"  url="https://github.com/GabrielHenB/bentricode">
+          A web application project written in PHP Laravel and Bootstrap for a fictional development company called Bentricode. We aim to practice front-end and back-end development using this project.
       </PostProj>
-      <PostProj pi="true" titulo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ab." imagem="https://picsum.photos/200/300" url="#">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem molestiae qui assumenda maiores error repellat ipsam, nulla ea expedita repellendus accusantium cum voluptatem, laboriosam dolor. Voluptas incidunt ipsa illo facilis?
+      <PostProj pi="true" titulo="Editor de Fundos de Imagens">
+      
+        <a class="text-light" target="_blank" href="https://bentricode-tirar-fundo-da-imagem.onrender.com/">
+          Link do site de exemplo
+        </a>
       </PostProj>
-      <PostProj  titulo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ab." imagem="https://picsum.photos/200/300" url="#">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem molestiae qui assumenda maiores error repellat ipsam, nulla ea expedita repellendus accusantium cum voluptatem, laboriosam dolor. Voluptas incidunt ipsa illo facilis?
+      <PostProj  titulo="Portal de filmes" imagem="/nazarik.png" url="https://github.com/GabrielHenB/nazarick-movies">
+        Portal de filmes realizado com tecnologias emergentes do mercado, como bootstrap, JavaScript, HTML, site totalmente responsivo e dinâmico,
       </PostProj>
     </div>
 
@@ -36,4 +39,5 @@ import PostProj from '@/components/PostProj.vue'
 .logo-text{
   text-align: right;
 }
+
 </style>

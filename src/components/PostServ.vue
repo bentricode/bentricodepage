@@ -21,7 +21,10 @@
         </div> 
 
         
-        <img :class="'col m-0 p-0  ' +(pi ? 'order-first order-md-first' : 'order-first order-md-last')" :src="imagem" alt="">
+        <div :class="'col m-0 p-0  ' +(pi ? 'order-first order-md-first' : 'order-first order-md-last')">
+            <img class="" :src="imagem" alt="">
+        </div>
+       
     </section>
 
 </template>
@@ -34,7 +37,9 @@
     }
     
     img{
-        width: 60%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .post-proj{
         margin-bottom: 30px;

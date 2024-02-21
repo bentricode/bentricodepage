@@ -120,7 +120,8 @@ onBeforeRouteUpdate(() => {
       <div class="container-fluid ">
 
         <RouterLink to="/" class="navbar-brand">
-          <img class="logo" id="logo-header" src="/bentrilogo.png" alt="BentriCode" />
+          <h3 id="titulo-header" class="m-0 p-0">Bentri<span class="bold">Code</span></h3>
+          <!-- <img class="logo" id="logo-header" src="/bentrilogo.png" alt="BentriCode" /> -->
         </RouterLink>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -182,7 +183,13 @@ onBeforeRouteUpdate(() => {
   list-style: none;
 
 }
-
+#titulo-header{
+  color: white;
+}
+#titulo-header span{
+  color: rgb(233, 202, 26);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 #menu a {
   text-decoration: none;
 }

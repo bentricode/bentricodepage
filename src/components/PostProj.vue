@@ -5,21 +5,23 @@
 <template>
     <section class="row gap-3 post-proj ">
         
-        <div class="col-12 col-md-7 col-lg-9 content-post">
+        <div class="col-12 col-md-6 col-lg-7 content-post">
             <h1 class="col-12 m-0 p-0 bold mx-2 mt-3">{{ titulo }}</h1>
             <p class="col-12 mb-5 p-0 m-2"> 
                 <slot>
                     
                 </slot>
             </p>
-            <a class="d-flex align-items-center gap-3   m-0 p-0 links-proj" :href="url">
+            <a target="_blank" class="d-flex align-items-center gap-3   m-0 p-0 links-proj" :href="url">
                 <i class="bi bi-github fs-3 mx-2"></i>
                 <h4 class="m-0 p-0 ">Confira o projeto </h4>
             </a>
         </div> 
 
+        <div :class="'col m-0 p-0  ' +(pi ? 'order-first order-md-first' : 'order-first order-md-last')">
+            <img class="p-2" :src="imagem" alt="">
+        </div>
         
-        <img :class="'col m-0 p-0  ' +(pi ? 'order-first order-md-first' : 'order-first order-md-last')" :src="imagem" alt="">
     </section>
 
 </template>
@@ -32,7 +34,9 @@
     }
     
     img{
-        width: 60%;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
     .post-proj{
         margin-bottom: 30px;
