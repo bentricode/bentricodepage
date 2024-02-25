@@ -152,7 +152,7 @@ onBeforeRouteUpdate(() => {
             </li>
           </ul>
           <Button id="seilacara" :metodo="fecharFaleconosco" texto="Fale Conosco"> 
-            <Faleconosco v-if="mostrarFaleconosco" @fechar="fecharFaleconosco"></Faleconosco>
+            <!--antes o faleconosco ficava aqui mas bugava-->
           </Button>
           
         </div>
@@ -162,6 +162,9 @@ onBeforeRouteUpdate(() => {
 
   </header>
   <!-- Header final -->
+  <!-- Form do Fale Conosco -->
+  <Faleconosco v-if="mostrarFaleconosco" @fechar="fecharFaleconosco"></Faleconosco>
+  <!-- Fim do Form do Fale Conosco -->
 </template>
     
 <style scoped>

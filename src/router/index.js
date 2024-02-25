@@ -32,6 +32,11 @@ const router = createRouter({
       component: () => import('../views/ServicesView.vue')
     },
     {
+      path: '/terms',
+      name: 'terms',
+      component: () => import('../views/TermsView.vue')
+    },
+    {
       path: '/:pathMatch(.*)*', // Depois fazer em server side se for o caso
       name: 'notfound',
       component: () => import('../views/404.vue')

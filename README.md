@@ -39,7 +39,9 @@ Márlon <br>
 
 # Building This
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help get you started with Bentricode. In order to develop this you're going to need Node and NPM installed.
+
+This project uses Vue 3, Pinia and Vue Router. We also use Bootstrap 5.
 
 ## Recommended IDE Setup
 
