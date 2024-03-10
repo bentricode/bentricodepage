@@ -5,7 +5,7 @@ import PostProj from '@/components/PostProj.vue'
 </script>
 <template>
   <Header></Header>
-  <SectionHeader imgsrc="/banner.png">
+  <SectionHeader imgsrc="/banner-projetos.png">
     <template v-slot:titulo-secao>
       NOSSOS PROJETOS
     </template>

@@ -5,7 +5,7 @@ import Header from '../components/Header.vue';
 </script>
 <template>
   <Header></Header>
-  <SectionHeader imgsrc="/banner.png">
+  <SectionHeader imgsrc="/banner-termos.png">
     <template v-slot:titulo-secao>
       Termos de Uso da BentriCode
     </template>

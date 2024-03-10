@@ -6,7 +6,7 @@ import Minicard from '@/components/Minicard.vue';
 </script>
 <template>
   <Header></Header>
-  <SectionHeader imgsrc="/banner.png">
+  <SectionHeader imgsrc="/banner-sobre.png">
     <template v-slot:titulo-secao>
       NOSSOS SERVIÇOS
     </template>

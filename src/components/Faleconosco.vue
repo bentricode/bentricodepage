@@ -1,6 +1,6 @@
 <template>
-    <div class="overlay" @click="fecharComponente">
-        <div class="componente" @click.stop>
+    <div  class="overlay" @click="fecharComponente">
+        <div id="form-contato" class="componente" @click.stop>
 
             <h2 class="text-center text-light px-4">Contate-nos</h2>
             <form @submit.prevent="formSubmit" class="o-form row g-3">
@@ -52,22 +52,36 @@
     </div>
 </template>
   
-<script>
-export default {
-    props: {
-    },
-    methods: {
-        fecharComponente() {
-            this.$emit('fechar');
-        },
-        formSubmit(){
-            window.alert("Erro: Nao aceitamos essa operacao no momento!");
-        },
-    },
-};
+<script setup>
+    import { onMounted } from 'vue';
+    const emit = defineEmits(['fechar;'])
+    onMounted(trocaClass);
+    function trocaClass(){
+        document.getElementById('form-contato').classList.add('subirComponente');
+    }
+    function fecharComponente() {
+       emit('fechar', true);
+    }
+    function formSubmit(){
+        window.alert("Erro: Nao aceitamos essa operacao no momento!");
+    }
+
 </script>
   
 <style scoped>
+.subirComponente{
+    animation: baixo-cima 0.7s linear forwards; 
+}
+@keyframes baixo-cima{
+    from{
+        opacity: 0;
+        transform: translateY(900px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 label {
     color: var(--cor-cinza);
 }
@@ -82,7 +96,7 @@ label {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.836);
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +104,7 @@ label {
 }
 
 .componente {
-    background-color: var(--cor-blue);
+    background-color: var(--cor-blue-fraco);
     width: 50%;
     padding: 20px;
     border-radius: 5px;
