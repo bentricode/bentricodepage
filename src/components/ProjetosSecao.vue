@@ -2,6 +2,7 @@
 import { useRouter, useRoute } from 'vue-router'
 import Card from '@/components/Card.vue';
 import Button from '@/components/Button.vue';
+import CardProjeto from '@/components/CardProjeto.vue';
 
 const router = useRouter();
 
@@ -19,8 +20,18 @@ function mudarRota(){
         <p class="text-center black mb-1">Como parte do seu portfólio, a BentriCode já realizou diversos projetos em
             desenvolvimento e design.<br />  Confira mais abaixo: </p>
         <article class="row justify-content-center mb-5 gap-4">
-            <img class="card-imagem col" src="/projeto1.png" />
-            <img class="card-imagem col" src="/projeto2.png" />
+            <CardProjeto source="/projeto1.png">
+                <span class="bold">Aplicação de Trocar Fundo</span>
+                <br>
+                Feito com Flask, JS
+            </CardProjeto>
+            <CardProjeto source="/projeto2.png">
+                <span class="bold">Horta Automática com Esp</span>
+                <br>
+                Feito com C++
+            </CardProjeto>
+            <!--<img class="card-imagem col" src="/projeto1.png" />
+            <img class="card-imagem col" src="/projeto2.png" />-->
         </article>
         <Button :metodo="mudarRota" texto="Ver Mais">
         </Button>
