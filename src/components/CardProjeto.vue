@@ -1,6 +1,14 @@
 <script setup>
 import { defineProps} from 'vue';
-const props = defineProps(['source']);
+//const props = defineProps(['source']);
+const props = defineProps({
+    source: {
+        type: String,
+        default(){
+            return '#';
+        }
+    }
+});
 //Depois possivelmente deixar passar classes
 </script>
 <template>
