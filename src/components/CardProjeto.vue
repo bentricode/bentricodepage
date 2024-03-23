@@ -6,7 +6,8 @@ const props = defineProps({
         type: String,
         default(){
             return '#';
-        }
+        },
+        required: true,
     }
 });
 //Depois possivelmente deixar passar classes
