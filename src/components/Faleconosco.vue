@@ -35,10 +35,10 @@
                         <option value="4">Outros</option>
                     </select>
                 </div>
-                <div class="col-md-2">
+                <!--<div class="col-md-2">
                     <label for="inputZip" class="form-label">Cod. Postal</label>
                     <input type="text" class="form-control" id="inputZip">
-                </div>
+                </div>-->
                 <div class="col-12">
                     <label for="inputTextao">Como a Bentricode pode te ajudar?</label>
                     <textarea class="form-control" rows="3" id="inputTextao"></textarea>
@@ -47,14 +47,20 @@
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </form>
-
+            <div v-if="state.mostrarAviso" id="janelaAviso" class="col-12">
+                <p><span class="bold">Desculpe!</span> ainda não temos essa função!</p>
+                <p>Envie para <a href="mailto:bentrielcode@gmail.com">bentricode@gmail.com</a></p>
+            </div>
         </div>
     </div>
 </template>
   
 <script setup>
-    import { onMounted } from 'vue';
-    const emit = defineEmits(['fechar;'])
+    import { onMounted, reactive } from 'vue';
+    const emit = defineEmits(['fechar']);
+    const state = reactive({
+        motrarAviso: false,
+    });
     onMounted(trocaClass);
     function trocaClass(){
         document.getElementById('form-contato').classList.add('subirComponente');
@@ -63,7 +69,8 @@
        emit('fechar', true);
     }
     function formSubmit(){
-        window.alert("Erro: Nao aceitamos essa operacao no momento!");
+        state.mostrarAviso = true;
+        //window.alert("Erro: Nao aceitamos essa operacao no momento!");
     }
 
 </script>
@@ -111,5 +118,17 @@ label {
 }
 option{
     color: black;
+}
+#janelaAviso{
+    margin-top: 10px;
+    text-align: center;
+}
+#janelaAviso p{
+    color: var(--cor-laranja);
+}
+#janelaAviso a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor-laranja-claro);
 }
 </style>

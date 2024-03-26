@@ -1,6 +1,14 @@
 <script setup>
     import { useRouter, useRoute } from 'vue-router'
-    defineProps(['imagem']);
+    //defineProps(['imagem']);
+    defineProps({
+        imagem: {
+            type: String,
+            default(){
+                return '#';
+            }
+        },
+    });
     const router = useRouter();
     function mudarRota(){
         router.push({
