@@ -15,20 +15,20 @@ function mudarRota(){
 
 <template>
     <!--SERVICOS-->
-    <section id="projetos" class="container d-flex flex-column align-items-center py-5 px-2 conteudo-card">
+    <section id="projetos" class="container-fluid d-flex flex-column align-items-center py-5 px-auto conteudo-card">
         <h1 class="text-center blue bold ">Nossos Projetos</h1>
         <p class="text-center black mb-1">Como parte do seu portfólio, a BentriCode já realizou diversos projetos em
             desenvolvimento e design.<br />  Confira mais abaixo: </p>
-        <article class="row justify-content-center mb-5 gap-4">
+        <article class="row justify-content-center mb-5">
             <CardProjeto source="/projeto1.png">
                 <span class="bold">Aplicação de Trocar Fundo</span>
                 <br>
                 Feito com Flask, JS
             </CardProjeto>
-            <CardProjeto source="/projeto2.png">
-                <span class="bold">Horta Automática com Esp</span>
+            <CardProjeto source="/nazarik.png">
+                <span class="bold">Portal de Filmes com API</span>
                 <br>
-                Feito com C++
+                Feito com JS e Bootstrap
             </CardProjeto>
             <!--<img class="card-imagem col" src="/projeto1.png" />
             <img class="card-imagem col" src="/projeto2.png" />-->
