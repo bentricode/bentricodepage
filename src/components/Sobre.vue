@@ -28,7 +28,7 @@ const saberMais = computed(() => {
                 construímos pontes entre sua visão e a presença online extraordinária que você merece. <br>
                 Juntos, vamos moldar o futuro da sua marca na web!
             </p>
-            <div class="d-flex gap-4 justify-content-evenly mt-2 text-center align-items-center">
+            <div class="d-flex gap-4 justify-content-evenly mt-2 text-center align-items-center px-1">
                 <div>
                     <i class="bi bi-cpu-fill"></i>
                     <p>Tecnologias Modernas</p>
@@ -47,7 +47,7 @@ const saberMais = computed(() => {
                 </div>
             </div>
         </div>
-        <img src="/aboutus.png" id="foto-sobre" class="col-lg-4 deleteme" alt="">
+        <img src="/aboutus2.png" id="foto-sobre" class="col-lg-4 deleteme" alt="">
     </section>
 </template>
 
